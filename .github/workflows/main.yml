@@ -20,7 +20,7 @@ jobs:
       - name: Install Serverless Framework
         run: npm install -g serverless
       - name: Serverless AWS authentication
-        run: serverless config credentials --provider aws --key ${{ secrets.AWS_KEY }} --secret ${{ secrets.AWS_SECRET }}
+        run: serverless config credentials --provider aws --key ${{ secrets.AWS_KEY }} --secret ${{ secrets.AWS_SECRET }} --component=@sls-next/serverless-component@1.18.0
       - name: Install NPM dependencies
         run: npm install
       - name: Deploy Next.js app
