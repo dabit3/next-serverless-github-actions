@@ -21,6 +21,11 @@ jobs:
         run: npm install -g serverless
       - name: Serverless AWS authentication
         run: sls config credentials --provider aws --key ${{ secrets.AWS_KEY }} --secret ${{ secrets.AWS_SECRET }}
+      - name: Create env file
+        run: |
+          cat > env.yml << EOF
+          ${{ secrets.ENV }}
+          EOF
       - name: Install NPM dependencies
         run: npm install
       - name: Deploy Next.js app
