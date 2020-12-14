@@ -4,7 +4,7 @@ on:
   push:
     branches: [ main ]
   pull_request:
-    branches: [ main ]
+    branches: [ dev ]
 
   workflow_dispatch:
 
@@ -19,14 +19,12 @@ jobs:
           node-version: '12.x'
       - name: Install Serverless Framework
         run: npm install -g serverless
-      - name: Serverless AWS authentication
-        run: serverless config credentials --provider aws --key ${{ secrets.AWS_KEY }} --secret ${{ secrets.AWS_SECRET }} --component=@sls-next/serverless-component@1.18.0
-      - name: Create env file
-        run: | 
-          cat > env.yml << EOF
-          ${{ secrets.ENV }}
-          EOF
+#       - name: Serverless AWS authentication
+#         run: serverless config credentials --provider aws --key ${{ secrets.AWS_KEY }} --secret ${{ secrets.AWS_SECRET }} --component=@sls-next/serverless-component@1.18.0
       - name: Install NPM dependencies
         run: npm install
       - name: Deploy Next.js app
         run: serverless
+        env:
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_KEY }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET }}
