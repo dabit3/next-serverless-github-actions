@@ -19,10 +19,14 @@ jobs:
           node-version: '12.x'
       - name: Install Serverless Framework
         run: npm install -g serverless
-#       - name: Serverless AWS authentication
-#         run: serverless config credentials --provider aws --key ${{ secrets.AWS_KEY }} --secret ${{ secrets.AWS_SECRET }} --component=@sls-next/serverless-component@1.18.0
       - name: Install NPM dependencies
         run: npm install
+      - name: Configure AWS Credentials
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: us-east-1
       - name: Deploy Next.js app
         run: serverless
         env:
