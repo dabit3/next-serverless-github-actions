@@ -11,7 +11,7 @@ export default function Home() {
 
       <main className={styles.main}>
         <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">THIS ISN'T EVEN MY FINAL FORM</a>
+          Welcome to <a href="https://nextjs.org">Minor update</a>
         </h1>
       </main>
 
