@@ -13,6 +13,7 @@ export default function Home() {
         <h1 className={styles.title}>
           Welcome to <a href="https://nextjs.org">Hello from first live update!</a>
         </h1>
+      </main>
 
       <footer className={styles.footer}>
         <a
