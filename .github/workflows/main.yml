@@ -26,7 +26,6 @@ jobs:
           aws-secret-access-key: ${{ secrets.AWS_SECRET }}
           aws-region: us-east-1
       - name: Serverless AWS authentication
-        # run: npx serverless --component=serverless-next config credentials --provider aws --key ${{ secrets.AWS_KEY }} --secret ${{ secrets.AWS_SECRET }}
         run: npx serverless --component=serverless-next
       - name: Deploy Next.js app
         run: npx serverless
