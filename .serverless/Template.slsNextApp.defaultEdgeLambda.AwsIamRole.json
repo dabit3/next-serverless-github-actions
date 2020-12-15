@@ -2,8 +2,8 @@
   "name": "gyf40zh-8jkvhap",
   "arn": "arn:aws:iam::557458351015:role/gyf40zh-8jkvhap",
   "service": [
-    "lambda.amazonaws.com",
-    "edgelambda.amazonaws.com"
+    "edgelambda.amazonaws.com",
+    "lambda.amazonaws.com"
   ],
   "policy": {
     "Version": "2012-10-17",
