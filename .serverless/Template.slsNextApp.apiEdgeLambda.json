@@ -1,0 +1,17 @@
+{
+  "name": "vkpkyzl-620o9h4",
+  "hash": "Vo+o+HgvcTu0yT2KTfdP8DMP9BlV/g2gusYDoiYenxU=",
+  "description": "API Lambda@Edge for Next CloudFront distribution",
+  "memory": 512,
+  "timeout": 10,
+  "code": "/Users/dabit/temp/delete/next-github-actions/.serverless_nextjs/api-lambda",
+  "shims": [],
+  "handler": "index.handler",
+  "runtime": "nodejs12.x",
+  "env": {},
+  "role": {
+    "arn": "arn:aws:iam::557458351015:role/vkpkyzl-sch9xql"
+  },
+  "arn": "arn:aws:lambda:us-east-1:557458351015:function:vkpkyzl-620o9h4",
+  "region": "us-east-1"
+}
